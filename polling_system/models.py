@@ -53,7 +53,19 @@ class Candidate(models.Model):
     campaign_events_schedule = models.TextField()
     previous_voting_record = models.TextField()
     languages_spoken = models.CharField(max_length=255)
+    votes = models.PositiveIntegerField(default=0)
 
-    # def __str__(self):
-    #     return f'{self.user.first_name} {self.user.family_name} {self.user.fathers_name}'
+    def __str__(self):
+        return self.user
 
+
+class Poll(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+    candidates = models.ManyToManyField('Candidate', related_name='polls', blank=True)
+    voters = models.ManyToManyField(UserCustom, related_name='voted_polls', blank=True)
+
+    def __str__(self):
+        return self.title
