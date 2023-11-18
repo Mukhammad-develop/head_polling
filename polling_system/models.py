@@ -27,8 +27,8 @@ class PoliticalParty(models.Model):
 
 class UserCustom(AbstractUser):
     first_name = models.CharField(max_length=75)
-    family_name = models.CharField(max_length=75)
-    fathers_name = models.CharField(max_length=75)
+    family_name = models.CharField(max_length=75, null=True, blank=True)
+    fathers_name = models.CharField(max_length=75, null=True, blank=True)
     is_candidate = models.BooleanField(default=False)
     is_voter = models.BooleanField(default=False)
 
