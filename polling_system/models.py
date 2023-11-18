@@ -29,8 +29,9 @@ class UserCustom(AbstractUser):
     first_name = models.CharField(max_length=75)
     family_name = models.CharField(max_length=75, null=True, blank=True)
     fathers_name = models.CharField(max_length=75, null=True, blank=True)
+    date_of_birth = models.DateField(null=True, blank=True)
+    contact_number = models.CharField(max_length=15, blank=True)
     is_candidate = models.BooleanField(default=False)
-    is_voter = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.first_name} {self.family_name} {self.fathers_name}'
@@ -53,16 +54,6 @@ class Candidate(models.Model):
     previous_voting_record = models.TextField()
     languages_spoken = models.CharField(max_length=255)
 
-    def __str__(self):
-        return f'{self.user.first_name} {self.user.family_name} {self.user.fathers_name}'
-
-
-class VoterCivilian(models.Model):
-    user = models.OneToOneField(UserCustom, on_delete=models.CASCADE, primary_key=True)
-    date_of_birth = models.DateField(null=True, blank=True)
-    contact_number = models.CharField(max_length=15, blank=True)
-
-    def __str__(self):
-        return f'{self.user.first_name} {self.user.family_name} {self.user.fathers_name}'
-
+    # def __str__(self):
+    #     return f'{self.user.first_name} {self.user.family_name} {self.user.fathers_name}'
 
