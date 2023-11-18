@@ -65,7 +65,6 @@ class Poll(models.Model):
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     candidates = models.ManyToManyField('Candidate', related_name='polls', blank=True)
-    voters = models.ManyToManyField(UserCustom, related_name='voted_polls', blank=True)
 
     def __str__(self):
         return self.title
