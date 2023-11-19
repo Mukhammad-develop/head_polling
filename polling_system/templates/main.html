@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index Page</title>
 </head>
 <body>
-    <h1>Hello, World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
+
+<h1>Political Parties</h1>
+<ul>
+    {% for party in political_parties %}
+        <li>{{ party.title }}</li>
+    {% endfor %}
+</ul>
+
+<h1>Polls</h1>
+<ul>
+    {% for poll in polls %}
+        <li>{{ poll.title }}</li>
+    {% endfor %}
+</ul>
+
 </body>
 </html>
