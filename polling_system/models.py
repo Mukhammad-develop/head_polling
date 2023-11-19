@@ -56,7 +56,7 @@ class Candidate(models.Model):
     votes = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return self.user
+        return self.user.username
 
 
 class Poll(models.Model):
@@ -68,3 +68,9 @@ class Poll(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Vote(models.Model):
+    voter_id = models.PositiveIntegerField()
+    voted_candidate_id = models.PositiveIntegerField()
+    poll_id = models.PositiveIntegerField()
