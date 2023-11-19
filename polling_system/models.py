@@ -71,6 +71,6 @@ class Poll(models.Model):
 
 
 class Vote(models.Model):
-    voter_id = models.PositiveIntegerField()
+    voter_id = models.PositiveIntegerField(primary_key=True)
     voted_candidate_id = models.PositiveIntegerField()
     poll_id = models.PositiveIntegerField()
