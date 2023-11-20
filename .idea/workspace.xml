@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3127919d-bdf9-42e6-8758-f2cc54721d4d" name="Changes" comment="" />
+    <list default="true" id="3127919d-bdf9-42e6-8758-f2cc54721d4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/polling_system/templates/candidate_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polling_system/templates/candidate_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polling_system/templates/poll_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polling_system/templates/poll_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling_system/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling_system/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling_system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling_system/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +28,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2YFCHA4N4NT5OPLPCYnEptQhBmt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
