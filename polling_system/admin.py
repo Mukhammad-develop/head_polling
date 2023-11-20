@@ -8,3 +8,5 @@ admin.site.register(UserCustom)
 admin.site.register(Candidate)
 
 admin.site.register(Poll)
+
+admin.site.register(Vote)
