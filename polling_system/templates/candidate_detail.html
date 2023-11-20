@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ candidate.user.first_name }} {{ candidate.user.family_name }} - Candidate Detail</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ candidate.user.first_name }} {{ candidate.user.family_name }}</h1>
+
+    <p><strong>Party:</strong> {{ candidate.party.title }}</p>
+    <p><strong>Biography:</strong> {{ candidate.biography }}</p>
+    <p><strong>Campaign Promises:</strong> {{ candidate.campaign_promises }}</p>
+    <p><strong>Contact Information:</strong> {{ candidate.contact_information }}</p>
+    <p><strong>Education:</strong> {{ candidate.education }}</p>
+    <p><strong>Professional Experience:</strong> {{ candidate.professional_experience }}</p>
+    <p><strong>Public Service Record:</strong> {{ candidate.public_service_record }}</p>
+    <p><strong>Social Media Links:</strong> {{ candidate.social_media_links }}</p>
+    <p><strong>Campaign Slogan:</strong> {{ candidate.campaign_slogan }}</p>
+    <p><strong>Endorsements:</strong> {{ candidate.endorsements }}</p>
+    <p><strong>Campaign Events Schedule:</strong> {{ candidate.campaign_events_schedule }}</p>
+    <p><strong>Previous Voting Record:</strong> {{ candidate.previous_voting_record }}</p>
+    <p><strong>Languages Spoken:</strong> {{ candidate.languages_spoken }}</p>
+    <p><strong>Votes:</strong> {{ candidate.votes }}</p>
+
+    <!-- Add more candidate details as needed -->
+
+    <a href="{% url 'candidate_list' %}">Back to Candidate List</a>
+</body>
+</html>

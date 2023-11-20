@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ poll.title }} - Poll Detail</title>
+</head>
+<body>
+    <h1>{{ poll.title }}</h1>
+
+    <p><strong>Description:</strong> {{ poll.description }}</p>
+    <p><strong>Start Date:</strong> {{ poll.start_date }}</p>
+    <p><strong>End Date:</strong> {{ poll.end_date }}</p>
+
+    <h2>Candidates</h2>
+    <ul>
+        {% for candidate in poll.candidates.all %}
+            <li>{{ candidate.user.first_name }} {{ candidate.user.family_name }} - {{ candidate.party.title }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add more details as needed -->
+
+    <a href="{% url 'poll_list' %}">Back to Poll List</a>
+</body>
+</html>
