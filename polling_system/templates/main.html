@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            color: #007BFF;
+        }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Page</title>
@@ -10,14 +41,49 @@
 <h1>Political Parties</h1>
 <ul>
     {% for party in political_parties %}
-        <li>{{ party.title }}</li>
+        <li>
+            <strong>Title:</strong> {{ party.title }}<br>
+            <strong>Leader:</strong> {{ party.leader.user.first_name }} {{ party.leader.user.family_name }}<br>
+            <strong>Ideology:</strong> {{ party.ideology }}<br>
+            <!-- Add more party details as needed -->
+        </li>
+    {% endfor %}
+</ul>
+
+<h1>Candidates</h1>
+<ul>
+    {% for candidate in candidates %}
+        <li>
+            <strong>Name:</strong> {{ candidate.user.first_name }} {{ candidate.user.family_name }}<br>
+            <strong>Party:</strong> {{ candidate.party.title }}<br>
+            <strong>Biography:</strong> {{ candidate.biography }}<br>
+            <!-- Add more candidate details as needed -->
+        </li>
     {% endfor %}
 </ul>
 
 <h1>Polls</h1>
 <ul>
     {% for poll in polls %}
-        <li>{{ poll.title }}</li>
+        <li>
+            <strong>Title:</strong> {{ poll.title }}<br>
+            <strong>Description:</strong> {{ poll.description }}<br>
+            <strong>Start Date:</strong> {{ poll.start_date }}<br>
+            <strong>End Date:</strong> {{ poll.end_date }}<br>
+            <!-- Add more poll details as needed -->
+        </li>
+    {% endfor %}
+</ul>
+
+<h1>Votes</h1>
+<ul>
+    {% for vote in votes %}
+        <li>
+            <strong>Voter ID:</strong> {{ vote.voter_id }}<br>
+            <strong>Voted Candidate:</strong> {{ vote.voted_candidate_id }}<br>
+            <strong>Poll ID:</strong> {{ vote.poll_id }}<br>
+            <!-- Add more vote details as needed -->
+        </li>
     {% endfor %}
 </ul>
 
