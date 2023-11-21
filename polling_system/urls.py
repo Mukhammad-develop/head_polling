@@ -8,5 +8,6 @@ urlpatterns = [
     path('polls/<int:poll_id>/', views.poll_detail, name='poll_detail'),
     path('candidates/', views.candidate_list, name='candidate_list'),
     path('candidates/<int:candidate_id>/', views.candidate_detail, name='candidate_detail'),
+    # path('partyditails/', views.party_ditails, name='partydetails')
 
 ]

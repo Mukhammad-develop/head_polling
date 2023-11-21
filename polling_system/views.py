@@ -41,3 +41,7 @@ def candidate_detail(request, candidate_id):
     candidate = get_object_or_404(Candidate, pk=candidate_id)
     context = {'candidate': candidate}
     return render(request, 'candidate_detail.html', context)
+
+
+# def political_party(request); 
+    

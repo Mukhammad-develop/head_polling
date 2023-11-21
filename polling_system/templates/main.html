@@ -66,7 +66,7 @@
 <ul>
     {% for poll in polls %}
         <li>
-            <strong>Title:</strong> {{ poll.title }}<br>
+            <strong>Title:</strong><a href="{% url 'poll_detail' poll.id %}">{{ poll.title }}</a><br>
             <strong>Description:</strong> {{ poll.description }}<br>
             <strong>Start Date:</strong> {{ poll.start_date }}<br>
             <strong>End Date:</strong> {{ poll.end_date }}<br>
