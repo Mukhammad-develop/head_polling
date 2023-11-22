@@ -1,53 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
+{% extends 'base_generator.html' %}
+{% load static %}
 
-        h1 {
-            color: #333;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        li {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-
-        p {
-            color: #555;
-            margin: 10px 0;
-        }
-
-        strong {
-            color: #000;
-        }
-</style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
     <title>Poll List</title>
-</head>
-<body>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'polling_system/poll_list.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
     <h1>Poll List</h1>
 
     <ul>
@@ -60,6 +24,5 @@
             </li>
         {% endfor %}
     </ul>
+{% endblock %}q
 
-</body>
-</html>

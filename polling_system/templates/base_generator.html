@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'polling_system/base_generator.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">All Questions</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
