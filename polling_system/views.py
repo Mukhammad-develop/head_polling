@@ -43,5 +43,13 @@ def candidate_detail(request, candidate_id):
     return render(request, 'candidate_detail.html', context)
 
 
-# def political_party(request); 
-    
+def party_list(request):
+    party = PoliticalParty.objects.all()
+    context = {'party': party}
+    return render(request, 'party_list.html', context)
+
+
+def party_detail(request, id):
+    party = get_object_or_404(PoliticalParty, pk=id)
+    context = {'party': party}
+    return render(request, 'party_detail.html', context)

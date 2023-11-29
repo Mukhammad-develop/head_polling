@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ party.title }} Detail</title>
+</head>
+<body>
+    <h1>{{ party.title }} Party Detail</h1>
+
+    <img src="{{ party.logo.url }}" alt="{{ party.title }} Logo" width="100">
+
+    <h2>Basic Information</h2>
+    <ul>
+        <li><strong>Leader:</strong> {{ party.leader.full_name }}</li>
+        <li><strong>Ideology:</strong> {{ party.ideology }}</li>
+        <li><strong>Year Founded:</strong> {{ party.year_founded }}</li>
+        <li><strong>Headquarters Location:</strong> {{ party.headquarters_location }}</li>
+        <li><strong>Motto or Slogan:</strong> {{ party.motto_or_slogan }}</li>
+    </ul>
+
+    <h2>Additional Information</h2>
+    <ul>
+        <li><strong>Manifesto:</strong> {{ party.manifesto }}</li>
+        <li><strong>Current Seats Held:</strong> {{ party.current_seats_held }}</li>
+        <li><strong>Historical Performance:</strong> {{ party.historical_performance }}</li>
+        <li><strong>Campaign Focus:</strong> {{ party.campaign_focus }}</li>
+        <li><strong>Social Media Links:</strong> <a href="{{ party.social_media_links }}" target="_blank">{{ party.social_media_links }}</a></li>
+        <li><strong>Contact Information:</strong> {{ party.contact_information }}</li>
+        <li><strong>Affiliated Organizations:</strong> {{ party.affiliated_organizations }}</li>
+        <li><strong>Previous Election Results:</strong> {{ party.previous_election_results }}</li>
+        <li><strong>Coalition Partners:</strong> {{ party.coalition_partners }}</li>
+        <li><strong>International Affiliations:</strong> {{ party.international_affiliations }}</li>
+    </ul>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
