@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
+from .forms import PollForm
 
 
 def index(request):
@@ -53,3 +54,16 @@ def party_detail(request, id):
     party = get_object_or_404(PoliticalParty, pk=id)
     context = {'party': party}
     return render(request, 'party_detail.html', context)
+
+
+def poll_add(request):
+    if request.method == 'POST':
+        form = PollForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success_page')
+        else:
+            return render(request, 'poll_add.html', {'form': form})
+    else:
+        form = PollForm()
+        return render(request, 'poll_add.html', {'form': form})

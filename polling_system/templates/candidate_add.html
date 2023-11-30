@@ -1,0 +1,168 @@
+{% load widget_tweaks %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.media }}
+
+    <div class="form-group">
+        {{ form.user.label_tag }}
+        {{ form.user }}
+        {% if form.user.errors %}
+            <div class="text-danger">
+                {{ form.user.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.avatar.label_tag }}
+        {{ form.avatar }}
+        {% if form.avatar.errors %}
+            <div class="text-danger">
+                {{ form.avatar.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.party.label_tag }}
+        {{ form.party }}
+        {% if form.party.errors %}
+            <div class="text-danger">
+                {{ form.party.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.biography.label_tag }}
+        {{ form.biography }}
+        {% if form.biography.errors %}
+            <div class="text-danger">
+                {{ form.biography.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.campaign_promises.label_tag }}
+        {{ form.campaign_promises }}
+        {% if form.campaign_promises.errors %}
+            <div class="text-danger">
+                {{ form.campaign_promises.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.contact_information.label_tag }}
+        {{ form.contact_information }}
+        {% if form.contact_information.errors %}
+            <div class="text-danger">
+                {{ form.contact_information.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.education.label_tag }}
+        {{ form.education }}
+        {% if form.education.errors %}
+            <div class="text-danger">
+                {{ form.education.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.professional_experience.label_tag }}
+        {{ form.professional_experience }}
+        {% if form.professional_experience.errors %}
+            <div class="text-danger">
+                {{ form.professional_experience.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.public_service_record.label_tag }}
+        {{ form.public_service_record }}
+        {% if form.public_service_record.errors %}
+            <div class="text-danger">
+                {{ form.public_service_record.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.social_media_links.label_tag }}
+        {{ form.social_media_links }}
+        {% if form.social_media_links.errors %}
+            <div class="text-danger">
+                {{ form.social_media_links.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.campaign_slogan.label_tag }}
+        {{ form.campaign_slogan }}
+        {% if form.campaign_slogan.errors %}
+            <div class="text-danger">
+                {{ form.campaign_slogan.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.endorsements.label_tag }}
+        {{ form.endorsements }}
+        {% if form.endorsements.errors %}
+            <div class="text-danger">
+                {{ form.endorsements.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.campaign_events_schedule.label_tag }}
+        {{ form.campaign_events_schedule }}
+        {% if form.campaign_events_schedule.errors %}
+            <div class="text-danger">
+                {{ form.campaign_events_schedule.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.previous_voting_record.label_tag }}
+        {{ form.previous_voting_record }}
+        {% if form.previous_voting_record.errors %}
+            <div class="text-danger">
+                {{ form.previous_voting_record.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.languages_spoken.label_tag }}
+        {{ form.languages_spoken }}
+        {% if form.languages_spoken.errors %}
+            <div class="text-danger">
+                {{ form.languages_spoken.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.votes.label_tag }}
+        {{ form.votes }}
+        {% if form.votes.errors %}
+            <div class="text-danger">
+                {{ form.votes.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <button type="submit">Submit</button>
+</form>

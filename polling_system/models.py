@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 class PoliticalParty(models.Model):
     title = models.CharField(max_length=100, unique=True)
-    logo = models.ImageField(upload_to='media/', null=True, blank=True)
+    logo = models.ImageField(upload_to='', null=True, blank=True)
     leader = models.OneToOneField('polling_system.Candidate', on_delete=models.SET_NULL, null=True, blank=True)
     ideology = models.TextField()
     year_founded = models.PositiveIntegerField()
@@ -39,7 +39,7 @@ class UserCustom(AbstractUser):
 
 class Candidate(models.Model):
     user = models.OneToOneField(UserCustom, on_delete=models.CASCADE, primary_key=True)
-    avatar = models.ImageField(upload_to='media/', null=True, blank=True)
+    avatar = models.ImageField(upload_to='', null=True, blank=True)
     party = models.ForeignKey(PoliticalParty, on_delete=models.SET_NULL, null=True, blank=True)
     biography = models.TextField()
     campaign_promises = models.TextField()
