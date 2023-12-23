@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3127919d-bdf9-42e6-8758-f2cc54721d4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/polling_system/templates/candidate_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polling_system/templates/poll_add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polling_system/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polling_system/templates/party_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/templates/party_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/polling_system/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/head_polling/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/head_polling/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/polling_system/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling_system/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

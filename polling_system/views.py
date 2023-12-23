@@ -53,6 +53,7 @@ def party_list(request):
 def party_detail(request, id):
     party = get_object_or_404(PoliticalParty, pk=id)
     context = {'party': party}
+    print(party.logo)
     return render(request, 'party_detail.html', context)
 
 
